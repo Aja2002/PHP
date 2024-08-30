@@ -1,0 +1,395 @@
+INDEX.PHP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 8: Team Gin with Nestea</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-section {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 250px; 
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        .contact-section h2 {
+            font-size: 1.2rem; 
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .contact-section .form-group {
+            margin-bottom: 0.5rem; 
+        }
+
+        .contact-section input[type="text"],
+        .contact-section input[type="email"] {
+            width: 100%;
+            padding: 0.3rem;
+            font-size: 0.9rem; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-section input[type="submit"] {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 0.9rem; 
+            background-color: #5c9e8f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-section input[type="submit"]:hover {
+            background-color: #4a8270;
+        }
+
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow-container img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            max-height: 100%; 
+            object-fit: cover;
+            object-position: center; 
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow-container img.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Group 8: Team Gin with Nestea</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="contact-section">
+            <div class="slideshow-container">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/455323578_883378626985626_3142330665925073083_n.jpg?stp=dst-jpg_p180x540&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGFRKKdY0POtWqqr77U3v1kwZBBJtjwkD7BkEEm2PCQPkOTB_VYoYbjQsMOjFNA1DT0Y9DEEUpDX59yhCgR6q7i&_nc_ohc=13aDaNfS5NsQ7kNvgHtos2A&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QFOR6_aGU4Wf6Vc2W_Jv-jOatSlyrnBSq_AfxxuYRGPgg&oe=66F4FCA4" class="slide" alt="Slide 1">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/456951522_1603863767011262_1162274274048410487_n.jpg?stp=dst-jpg_s206x206&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGbgDJTUnLqRpxEeWgvtKQXaujSOvnwJsFq6NI6-fAmwVBw6hage10OLGXPwSD7l-U-VgCoY6eQP6GqacThvY2B&_nc_ohc=QdMhVttJrKEQ7kNvgFFYjPn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGLopirk1-uOv99vIosWXShnpR625fgGEi3lN65KvovPQ&oe=66F60EC6" class="slide" alt="Slide 2">
+                <img src="https://scontent.fmnl9-2.fna.fbcdn.net/v/t39.30808-6/420770206_404448885441732_1410637591394785174_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEa2y2TWf6vppWSfS9W_FXSGituJPTlhToaK24k9OWFOgK01yy_NXFsrOlx8NGUwCgD7jWNzozmBMBYDNtWKRAQ&_nc_ohc=Ia6OEYyn1aYQ7kNvgFOQj5d&_nc_ht=scontent.fmnl9-2.fna&oh=00_AYDShoSygHMgqYf-1uZfWeO-NOFg2fdOzZLUC8EQCXhtqw&oe=66D38785" class="slide" alt="Slide 3">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/457139941_1728712707948486_1672429212356593639_n.jpg?stp=dst-jpg_s480x480&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHdzbr3QNAeCgt7kmBbJD5ieWl9WnSu6IV5aX1adK7ohTrrfAnorVWIbkZlOrykPAGp1htphlXRUBifkFHxl7a1&_nc_ohc=MTXl-c-hdmQQ7kNvgEedCPh&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=AOwVkyxW02abfvTXEORz2tg&oh=03_Q7cD1QFJuGnTBjfoluIZLSsQmodXrH-HO9EKyYbMXmnZPrxLgA&oe=66F60264" class="slide" alt="Slide 4">
+                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/419213255_1090038565772264_2688707345675697790_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeECeGqF8aFZUDRMP2jEzHFPk99e11eF_2GT317XV4X_YSizfYqZg1OD8lH_sxwS6TomXrUc2AijpiAj0ob0XXXf&_nc_ohc=nlaYdfEV2hgQ7kNvgEiooLV&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHo_hudyLN8iNLU_aHkesDFOvZJ9r8oy-tVdK2AvUqFtg&oe=66F4FD7A" class="slide" alt="Slide 5">
+            </div>
+
+            <div class="form-content">
+                <h2>Contact Us</h2>
+                <form id="contactForm" method="post" action="process.php">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-container img');
+        const totalSlides = slides.length;
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === slideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+
+            slideIndex = (slideIndex + 1) % totalSlides;
+        }
+
+        setInterval(showSlides, 3000); 
+        showSlides(); 
+    </script>
+</body>
+</html>
+
+
+STYLE.CSS
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5c9e8f;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #cb8d09;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+.team-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.profile {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 280px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+}
+
+.profile h2 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.profile p {
+    padding: 0 1rem 1rem;
+    color: #555;
+}
+
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #5c9e8f;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4a8270;
+}
+
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow-container img {
+    position: absolute;
+    width: 100%; 
+    height: auto; 
+    max-height: 400px; 
+    object-fit: cover; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+#search-bar {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+.profile {
+    display: block; 
+}
+
+
+SCRIPT.JS
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("messageField").value;
+
+    if (name === "" || email === "" || message === "") {
+        event.preventDefault();
+        alert("Please fill in all fields.");
+    }
+});
+document.getElementById('search-bar').addEventListener('input', function() {
+    let searchQuery = this.value.toLowerCase();
+    let profiles = document.querySelectorAll('.profile');
+
+    profiles.forEach(profile => {
+        let name = profile.getAttribute('data-name').toLowerCase();
+
+        if (searchQuery.split(',').map(term => term.trim().toLowerCase()).includes(name)) {
+            profile.style.display = 'block'; 
+        } else {
+            profile.style.display = 'none'; 
+        }
+    });
+});
+
+
+PROCESS.PHP
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+
+   
+    header("Location: home.html");
+    exit();
+}
+?>
+
+
+HOME.HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Group 8</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li>
+                        <form action="#" method="get" class="search-form">
+                            <input type="text" placeholder="Search..." name="search">
+                            <button type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Group 8! We are a team of dedicated individuals working on exciting projects and collaborations. Our mission is to bring innovative solutions and ideas to life. Stay tuned for more updates and feel free to get in touch with us!</p>
+
+            
+            <div class="team-profile">
+                <div class="profile">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/455620879_1185931929193406_6113367559798932034_n.jpg?stp=dst-jpg_s403x403&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeHmrkdXAQR2YvuyY-eNGw4UK1YVAGuJMQIrVhUAa4kxAgHY81RQjPU7XVpkLBeyl9A2rdZ9QUrMRuipRZ5E3wnv&_nc_ohc=jbqpRNGIqroQ7kNvgG0x_jD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=ASlh5hrQEZiprKvwaf-sPAm&oh=03_Q7cD1QFq_a5GAZvKjxnJu-S1gfQJxxV0GzBW8RowBVDGj-y7OQ&oe=66F622EF" alt="Josh Castillo">
+                    <h2>Josh Castillo</h2>
+                    <p>Bini Josh<br>19 years old<br>Blk 28 Lot 26 SHV Putatan<br>The Gymrat.<br>the most handsome of all.<br>jack of all trades.<br>the best person you can rely on.<br>the best person in the whole wide world.<br>kidding, just a normal person who dreamed of everything with my TOTGA.</p>
+                </div>
+                <div class="profile">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/448759565_3349818431978873_1983703846100019516_n.jpg?stp=dst-jpg_s480x480&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEDYms4VWaMXMF7eFvn7_sS5g7sWQuqR_jmDuxZC6pH-BQY6LV6ogZ-8SRgFxZuKxnENSU24IztCO2Xwj9TroYZ&_nc_ohc=OvYp1yLgOIEQ7kNvgHvc7W6&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGzuAJjxlyOp3baJpeG8O0Ydf5r_gHAn0lwYgMPvHNVFg&oe=66F52975" alt="Arwin Aguas">
+                    <h2>Arwin Aguas</h2>
+                    <p>Bini Arwin<br>26 years old<br>Blk 53 Lot 22 Gen Gregorio Del Pilar St. SHV<br>Behind all the muscles, all the pounds gained, every weight lifted, is just a little kid who didn't want feel weak or hurt ever again.</p>
+                </div>
+                <div class="profile">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/456951522_1603863767011262_1162274274048410487_n.jpg?stp=dst-jpg_s403x403&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGbgDJTUnLqRpxEeWgvtKQXaujSOvnwJsFq6NI6-fAmwVBw6hage10OLGXPwSD7l-U-VgCoY6eQP6GqacThvY2B&_nc_ohc=QdMhVttJrKEQ7kNvgGaUODg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGiYXpORzrb5oo7Q0o6bsRyOMIQGNGFf_qoSFQQzZj5vg&oe=66F52DC6" alt="Andrei Egualan">
+                    <h2>Andrei Egualan</h2>
+                    <p>Bini Andrei<br>20 Years Old<br>Lodora Village <br>The secret of health for both mind and the body is not to mourn for the past, not to worry about the future, or not to anticipate troubles, but to live in the present moment wisely and earnestly.</p>
+                </div>
+                <div class="profile">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/455323578_883378626985626_3142330665925073083_n.jpg?stp=dst-jpg_p180x540&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGFRKKdY0POtWqqr77U3v1kwZBBJtjwkD7BkEEm2PCQPkOTB_VYoYbjQsMOjFNA1DT0Y9DEEUpDX59yhCgR6q7i&_nc_ohc=13aDaNfS5NsQ7kNvgHtos2A&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QFOR6_aGU4Wf6Vc2W_Jv-jOatSlyrnBSq_AfxxuYRGPgg&oe=66F4FCA4" alt="Lorenzo Valdez">
+                    <h2>Lorenzo Valdez</h2>
+                    <p>Bini Lorenzo<br>22 years old<br>Esporlas Upper Putatan<br>I have wasted a lot of time trying to be loved by everyone else when I should have been learning how to love myself.You can't go back and change the beginning but you can start where you are and change the ending.</p>
+                </div>
+                <div class="profile">
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/419213255_1090038565772264_2688707345675697790_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeECeGqF8aFZUDRMP2jEzHFPk99e11eF_2GT317XV4X_YSizfYqZg1OD8lH_sxwS6TomXrUc2AijpiAj0ob0XXXf&_nc_ohc=nlaYdfEV2hgQ7kNvgEiooLV&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHo_hudyLN8iNLU_aHkesDFOvZJ9r8oy-tVdK2AvUqFtg&oe=66F4FD7A" alt="Serge Yusingco">
+                    <h2>Serge Yusingco</h2>
+                    <p>Bini Serge<br>23 years old<br>709-B Aster Street, Lakeview Homes Putatan<br>Your personality isn't set in stone; it's a work in progress. Every action, every thought, shapes the person you become. Embrace the power to change, grow, and refine the traits that define who you are.</p>
+                </div>
+            </div>
+            
+             
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need to get in touch, please reach out to the group members.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Group 8. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
