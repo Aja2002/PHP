@@ -1,0 +1,32 @@
+form').addEventListener('submit', function(event) {
+                    event.preventDefault(); 
+                    let searchQuery = document.getElementById('search-bar').value.toLowerCase();
+                    let profiles = document.querySelectorAll('.profile');
+                    let found = false; 
+        
+                    /
+                    profiles.forEach(profile => {
+                        profile.style.display = 'none'; 
+                    });
+        
+                    
+                    profiles.forEach(profile => {
+                        let name = profile.getAttribute('data-name').toLowerCase();
+        
+                        if (name.includes(searchQuery)) {
+                            profile.style.display = 'block'; 
+                            found = true; 
+                            
+                            profile.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+        
+                    
+                    if (!found) {
+                        alert("No member found with that name.");
+                    }
+                });
+            </script>
+        
+        </body>
+</html
