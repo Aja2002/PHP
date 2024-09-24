@@ -1,0 +1,41 @@
+YdfEV2hgQ7kNvgEiooLV&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHo_hudyLN8iNLU_aHkesDFOvZJ9r8oy-tVdK2AvUqFtg&oe=66F4FD7A" class="slide" alt="Slide 5">
+            </div>
+
+            <div class="form-content">
+                <h2>Contact Us</h2>
+                <form id="contactForm" method="post" action="process.php">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-container img');
+        const totalSlides = slides.length;
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === slideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+
+            slideIndex = (slideIndex + 1) % totalSlides;
+        }
+
+        setInterval(showSlides, 3000); 
+        showSlides(); 
+    </script>
+</body>
+</html
